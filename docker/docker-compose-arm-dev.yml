@@ -3,23 +3,23 @@ version: "3.8"
 services:
   mysql:
     image: mysql:latest
+    container_name: pos-mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: E@P4ssw0rd@123
+      MYSQL_DATABASE: pos
     volumes:
       - ./data:/var/lib/mysql
-      - ./initData:/docker-entrypoint-initdb.d
     ports:
       - "3306:3306"
 
   phpmyadmin:
     image: arm64v8/phpmyadmin:latest
+    container_name: pos-phpmyadmin
     restart: always
     environment:
       PMA_HOST: mysql
       PMA_PORT: 3306
-      UPLOAD_LIMIT: 300M
     depends_on:
       - mysql
     ports:
