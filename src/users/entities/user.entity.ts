@@ -1,3 +1,4 @@
+import { Business } from 'src/businesses/entities/business.entity';
 import {
   Column,
   Entity,
@@ -36,6 +37,9 @@ export class User {
   // @ManyToOne(() => UserGroup, (userGroup) => userGroup.id, { nullable: true })
   // @JoinColumn()
   // userGroup: string;
+  @ManyToOne(() => Business, (business) => business.id, { nullable: true })
+  @JoinColumn()
+  business: string;
 
   @Column({ default: null })
   image: string;

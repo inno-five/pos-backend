@@ -16,6 +16,9 @@ export class UpdateUserDto extends PartialType(CreateUserDto) {
   role?: string;
 
   @IsString()
+  business: string;
+
+  @IsString()
   updateBy?: string;
 
   @IsDate()
