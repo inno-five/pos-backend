@@ -5,6 +5,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MenusModule } from './menus/menus.module';
 import { UsersModule } from './users/users.module';
+import { BusinessesModule } from './businesses/businesses.module';
+import { BusinessTypesModule } from './business-types/business-types.module';
 
 @Module({
   imports: [
@@ -30,6 +32,8 @@ import { UsersModule } from './users/users.module';
     // }),
     MenusModule,
     UsersModule,
+    BusinessesModule,
+    BusinessTypesModule,
   ],
   controllers: [AppController],
   providers: [AppService],

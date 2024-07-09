@@ -14,6 +14,7 @@ export const users: User[] = [
     image: null,
     isActive: true,
     role: 'admin',
+    business: null,
     isSuperAdmin: true,
     createBy: null,
     createAt: null,

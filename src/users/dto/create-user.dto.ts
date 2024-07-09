@@ -17,6 +17,9 @@ export class CreateUserDto {
   role: string;
 
   @IsString()
+  business: string;
+
+  @IsString()
   createBy: string;
 
   @IsDate()
